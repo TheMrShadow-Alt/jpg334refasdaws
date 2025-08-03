@@ -1,0 +1,43 @@
+name: Public Upload Submission
+description: Submit an image or text file to be added to the public dashboard.
+title: "[Upload] Your Title Here"
+labels: [upload, pending-review]
+assignees:
+  - TheMrShadow-Alt
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📤 Upload Submission Form
+        Please fill out the details below to submit your content for public display.
+
+  - type: input
+    id: name
+    attributes:
+      label: Display Name
+      description: What should this upload be called?
+      placeholder: e.g. Fort Patriot Banner
+
+  - type: dropdown
+    id: type
+    attributes:
+      label: Upload Type
+      description: What kind of content are you submitting?
+      options:
+        - Image
+        - Text
+        - Other
+
+  - type: input
+    id: url
+    attributes:
+      label: File URL
+      description: Paste a direct link to your file (e.g. GitHub raw link, Imgur, Pastebin).
+      placeholder: https://raw.githubusercontent.com/...
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Optional description or context for your upload.
+      placeholder: This banner represents our new allied group...
